@@ -3,7 +3,7 @@
 
 import random
 
-class perceptron:
+class Perceptron:
     def __int__(self, num_inputs):
         self.weights = [random.uniform(-1,1) for _ in range (num_inputs)]
         self.bias = random.uniform(-1,1)
@@ -42,11 +42,11 @@ class perceptron:
 
 # Ejemplo de uso 
 
-perceptron = perceptron(2)
+perceptron = Perceptron
 
 #si exixte el archivo, cargha pesos
 try:
-     perceptron.load_weights8("weights.txt")
+     perceptron.load_weights("weights.txt")
 except:
      print("no se puede cargar los pesos ")
      print("entrenando...")
